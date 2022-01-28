@@ -1,0 +1,475 @@
+<!-- styles -->
+<style>
+    /*
+=============== 
+Fonts
+===============
+*/
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+    /*
+=============== 
+Variables
+===============
+*/
+
+    :root {
+        /* dark shades of primary color*/
+        /*--clr-primary-1: hsl(205, 86%, 17%);*/
+        /*--clr-primary-2: hsl(205, 77%, 27%);*/
+        /*--clr-primary-3: hsl(205, 72%, 37%);*/
+        /*--clr-primary-4: hsl(205, 63%, 48%);*/
+        /* primary/main color */
+        /* --clr-primary-5: hsl(205, 78%, 60%); */
+        --clr-primary-5: #E7535A;
+        /* lighter shades of primary color */
+        --clr-primary-6: hsl(205, 89%, 70%);
+        --clr-primary-7: hsl(205, 90%, 76%);
+        --clr-primary-8: hsl(205, 86%, 81%);
+        --clr-primary-9: hsl(205, 90%, 88%);
+        --clr-primary-10: hsl(205, 100%, 96%);
+        /* darkest grey - used for headings */
+        --clr-grey-1: hsl(209, 61%, 16%);
+        --clr-grey-2: hsl(211, 39%, 23%);
+        --clr-grey-3: hsl(209, 34%, 30%);
+        --clr-grey-4: hsl(209, 28%, 39%);
+        /* grey used for paragraphs */
+        /*--clr-grey-5: hsl(210, 22%, 49%);*/
+        /*--clr-grey-6: hsl(209, 23%, 60%);*/
+        /*--clr-grey-7: hsl(211, 27%, 70%);*/
+        /*--clr-grey-8: hsl(210, 31%, 80%);*/
+        /*--clr-grey-9: hsl(212, 33%, 89%);*/
+        --clr-grey-10: hsl(210, 36%, 96%);
+        --clr-white: #fff;
+        --clr-red-dark: hsl(360, 67%, 44%);
+        --clr-red-light: hsl(360, 71%, 66%);
+        --clr-green-dark: hsl(125, 67%, 44%);
+        --clr-green-light: hsl(125, 71%, 66%);
+        --clr-black: #222;
+        --ff-primary: "Roboto", sans-serif;
+        --ff-secondary: "Open Sans", sans-serif;
+        --transition: all 0.3s linear;
+        --spacing: 0.1rem;
+        --radius: 0.25rem;
+        --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        --max-width: 1170px;
+        --fixed-width: 620px;
+    }
+
+    /*
+=============== 
+Global Styles
+===============
+*/
+
+    /* *,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+} */
+    @media screen and (min-width: 800px) {
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+        }
+
+        body {
+            font-size: 1rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            line-height: 1;
+        }
+    }
+
+    /*  global classes */
+
+    /*section */
+    .section {
+        padding: 5rem 0;
+    }
+
+    /* .section-center {*/
+    /*  width: 90vw;*/
+    /*  margin: 0 auto;*/
+    /*  max-width: 1170px;*/
+    /*} */
+    @media screen and (min-width: 992px) {
+        .section-center {
+            width: 85vw;
+        }
+    }
+
+    /*main {*/
+    /*  min-height: 100vh;*/
+    /*  display: grid;*/
+    /*  place-items: center;*/
+    /*}*/
+
+    /*
+=============== 
+Reviews
+===============
+*/
+    main {
+        min-height: 0vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .underline {
+        height: 0.25rem;
+        width: 5rem;
+        background: var(--clr-primary-5);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container-testimonials {
+        width: 80vw;
+        max-width: var(--fixed-width);
+    }
+
+    .review {
+        background: var(--clr-white);
+        padding: 1.5rem 2rem;
+        border-radius: var(--radius);
+        box-shadow: var(--light-shadow);
+        transition: var(--transition);
+        text-align: center;
+    }
+
+    .review:hover {
+        box-shadow: var(--dark-shadow);
+    }
+
+    .img-container {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+    }
+
+    #person-img {
+        width: 100%;
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .img-container::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f10e";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        transform: translateY(25%);
+        background: var(--clr-primary-5);
+        color: var(--clr-white);
+    }
+
+    .img-container::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--clr-primary-5);
+        position: absolute;
+        top: -0.25rem;
+        right: -0.5rem;
+        border-radius: 50%;
+    }
+
+    #author {
+        margin-bottom: 0.25rem;
+    }
+
+    #job {
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        color: var(--clr-primary-5);
+        font-size: 0.85rem;
+    }
+
+    #info {
+        margin-bottom: 0.75rem;
+    }
+
+    .prev-btn,
+    .next-btn {
+        /* color: var(--clr-primary-7); */
+        font-size: 1.25rem;
+        background: transparent;
+        border-color: transparent;
+        margin: 0 0.5rem;
+        transition: var(--transition);
+        cursor: pointer;
+    }
+
+    .prev-btn:hover,
+    .next-btn:hover {
+        color: var(--clr-primary-5);
+    }
+
+    .random-btn {
+        margin-top: 0.5rem;
+        background: var(--clr-gray-10);
+        color: var(--clr-primary-5);
+        padding: 0.25rem 0.5rem;
+        text-transform: capitalize;
+        border-radius: var(--radius);
+        transition: var(--transition);
+        border-color: var(--clr-primary-5);
+        cursor: pointer;
+    }
+
+    .random-btn:hover {
+        background: var(--clr-primary-5);
+        color: var(--clr-primary-1);
+    }
+
+    .cutie-fixa {
+        /* background-color: red;  */
+        min-width: 100px;
+        min-height: 145px;
+    }
+</style>
+
+<body>
+    <main>
+        <section class="container-testimonials">
+            <!-- title -->
+            <div class="title">
+                <h2> Testimonials </h2>
+                <div class="underline"></div>
+            </div>
+            <!-- review -->
+            <article class="review">
+                <div class="img-container">
+                    <img src="https://painconcern.org.uk/wp-content/uploads/2021/12/Georgia_Gaffney.jpg" id="person-img"
+                        alt="" />
+                </div>
+                <h4 id="author"> Georgia </h4>
+                <p id="job"> Editorial Volunteer </p>
+                <div class="cutie-fixa">
+                    <p id="info">
+                        "Developing my editorial skills and participating in an organisation that supports people\'s
+                        wellbeing were my main
+                        motivations for volunteering at Pain Concern, but I have felt many other benefits. I only
+                        started volunteering for Pain Concern this March, but I\'ve already been made to feel part of
+                        the team by everyone here. A major strength of Pain Concern is that we stay connected via Teams
+                        and email, and so there is always a feeling of working towards common goals. Whenever I am doing
+                        a task, I get informative guidance and feedback, which helps me improve my skills."</p>
+                </div>
+                <!-- prev next buttons-->
+                <div class="button-container">
+                    <button class="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <!-- random button -->
+                <button class="random-btn">surprise me</button>
+            </article>
+        </section>
+    </main>
+</body>
+<!-- javascript -->
+<script>
+    // local reviews data
+    const reviews = [
+
+
+        {
+            id: 1,
+            name: "Georgia ",
+            job: "Editorial Volunteer",
+            img:
+                "https://painconcern.org.uk/wp-content/uploads/2021/12/Georgia_Gaffney.jpg",
+            text:
+                "Developing my editorial skills and participating in an organisation that supports people’s wellbeing were my main motivations for volunteering at Pain Concern, but I have felt many other benefits. I only started volunteering for Pain Concern this March, but I’ve already been made to feel part of the team by everyone here. A major strength of Pain Concern is that we stay connected via Teams and email, and so there is always a feeling of working towards common goals. Whenever I am doing a task, I get informative guidance and feedback, which helps me improve my skills.",
+        },
+        {
+            id: 2,
+            name: "Katie ",
+            job: "Listener & Readers Panel Volunteer",
+            img:
+                "https://painconcern.org.uk/wp-content/uploads/2021/12/Katie_Brumpton.jpg",
+            text:
+                "I have really enjoyed volunteering so far. I have learnt so much and I feel like these skills are being put into practice and making a positive difference to people's lives.​ It has given me lots of telephone and compassionate skills, I also have a wider range of knowledge surrounding chronic pain", 
+        },
+        {
+            id: 3,
+            name: "Bassel",
+            job: "Social Media Volunteer",
+            img:
+                "https://painconcern.org.uk/wp-content/uploads/2021/12/Bassel_Awwad.jpg",
+            text:
+                "I am glad that I volunteered at Pain Concern. I enjoy helping others but also it has helped with chronic pain that I have experienced for a number of years. I find that everyone is also very supportive of this which is really appreciative. I have gained lots of new skills. Some of the skills I have enhanced through training and volunteering is listening, communication, confidence, articulation and knowledge on chronic pain.
+​",
+        },
+        {
+            id: 4,
+            name: "Vicki",
+            job: "Listener & Readers Panel volunteer ",
+            img:
+                "https://painconcern.org.uk/wp-content/uploads/2021/12/Vicki_Cooper.jpg",
+            text:
+                "I love being a Listener and Reader panel volunteer for Pain Concern. As well as helping others, reviewing their podcasts and literature means I often come across ideas I can try for my own pain management.",
+        },
+        {
+            id: 5,
+            name: "Isabelle",
+            job: "Online community volunteer ",
+            img:
+                "https://painconcern.org.uk/wp-content/uploads/2021/12/roz1-scaled.jpg",
+            text:
+                "I volunteer because I am looking to build a career in psychology, and Pain Concern offer a lot of support and training for their volunteers. They also have a lot of resources and provide great help for people living with chronic pain, and I enjoy being able to help others.",
+        },
+        {
+            id: 6,
+            name: "Sara",
+            job: "HR volunteer ",
+            img:
+                "https://painconcern.org.uk/wp-content/uploads/2021/12/roz1-scaled.jpg",
+            text:
+                "Volunteering for Pain Concern is very rewarding as it gives me a unique experience in my field of studies and makes me proud to be part of an organisation that makes a real impact on people's lives.",
+        },
+        {
+            id: 7,
+            name: "Glen",
+            job: "Helpline & Online community volunteer ",
+            img:
+                "https://painconcern.org.uk/wp-content/uploads/2021/12/roz1-scaled.jpg",
+            text:
+                "I volunteer because it gives me a sense of purpose and allows me to help other people in chronic pain.",
+        },
+    ];
+    // select items
+    const img = document.getElementById("person-img");
+    const author = document.getElementById("author");
+    const job = document.getElementById("job");
+    const info = document.getElementById("info");
+
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+    const randomBtn = document.querySelector(".random-btn");
+
+    // set starting item
+    let currentItem = 0;
+
+    // load initial item
+    window.addEventListener("DOMContentLoaded", function () {
+        const item = reviews[currentItem];
+        img.src = item.img;
+        author.textContent = item.name;
+        job.textContent = item.job;
+        info.textContent = item.text;
+    });
+
+    // show person based on item
+    function showPerson(person) {
+        const item = reviews[person];
+        img.src = item.img;
+        author.textContent = item.name;
+        job.textContent = item.job;
+        info.textContent = item.text;
+    }
+    // show next person
+    nextBtn.addEventListener("click", function () {
+        currentItem++;
+        if (currentItem > reviews.length - 1) {
+            currentItem = 0;
+        }
+        showPerson(currentItem);
+    });
+    // show prev person
+    prevBtn.addEventListener("click", function () {
+        currentItem--;
+        if (currentItem < 0) {
+            currentItem = reviews.length - 1;
+        }
+        showPerson(currentItem);
+    });
+    // show random person
+    randomBtn.addEventListener("click", function () {
+        console.log("hello");
+
+        currentItem = Math.floor(Math.random() * reviews.length);
+        showPerson(currentItem);
+    });
+</script>
+
+</html>

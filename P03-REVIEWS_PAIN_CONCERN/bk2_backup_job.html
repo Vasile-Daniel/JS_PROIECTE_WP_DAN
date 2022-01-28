@@ -1,0 +1,431 @@
+<!-- wp:html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q & A</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- extra fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet" />
+    <!-- styles -->
+    <style>
+        /*
+=============== 
+Fonts
+===============
+*/
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+        /*
+=============== 
+Variables
+===============
+*/
+
+        :root {
+            /* dark shades of primary color*/
+            /*--clr-primary-1: hsl(205, 86%, 17%);*/
+            /*--clr-primary-2: hsl(205, 77%, 27%);*/
+            /*--clr-primary-3: hsl(205, 72%, 37%);*/
+            /*--clr-primary-4: hsl(205, 63%, 48%);*/
+            /* primary/main color */
+            --clr-primary-5: #e7535a;
+            /* lighter shades of primary color */
+            /*--clr-primary-6: hsl(205, 89%, 70%);*/
+            /*--clr-primary-7: hsl(205, 90%, 76%);*/
+            /*--clr-primary-8: hsl(205, 86%, 81%);*/
+            /*--clr-primary-9: hsl(205, 90%, 88%);*/
+            --clr-primary-10: hsl(205, 100%, 96%);
+            /* darkest grey - used for headings */
+            --clr-grey-1: hsl(209, 61%, 16%);
+            --clr-grey-2: hsl(211, 39%, 23%);
+            --clr-grey-3: hsl(209, 34%, 30%);
+            --clr-grey-4: hsl(209, 28%, 39%);
+            /* grey used for paragraphs */
+            --clr-grey-5: hsl(210, 22%, 49%);
+            --clr-grey-6: hsl(209, 23%, 60%);
+            --clr-grey-7: hsl(211, 27%, 70%);
+            --clr-grey-8: hsl(210, 31%, 80%);
+            --clr-grey-9: hsl(212, 33%, 89%);
+            --clr-grey-10: hsl(210, 36%, 96%);
+            /*--clr-white: #fff;*/
+            /*--clr-red-dark: hsl(360, 67%, 44%);*/
+            /*--clr-red-light: hsl(360, 71%, 66%);*/
+            /*--clr-green-dark: hsl(125, 67%, 44%);*/
+            /*--clr-green-light: hsl(125, 71%, 66%);*/
+            --clr-gold: #E7535A;
+            --clr-black: #222;
+            --ff-primary: "Roboto", sans-serif;
+            --ff-secondary: "Georgia", sans-serif;
+            --transition: all 0.3s linear;
+            --spacing: 0.25rem;
+            --radius: 0.5rem;
+            --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            --max-width: 1170px;
+            --fixed-width: 620px;
+            --width-back: 220px;
+        }
+
+        /*
+=============== 
+Global Styles
+===============
+*/
+
+        *,
+        ::after,
+        ::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*body {*/
+        /*    font-family: var(--ff-secondary);*/
+        /*    background: var(--clr-grey-10);*/
+        /*    color: var(--clr-grey-1);*/
+        /*    line-height: 1.5;*/
+        /*    font-size: 0.875rem;*/
+        /*}*/
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            letter-spacing: var(--spacing);
+            text-transform: capitalize;
+            line-height: 1.25;
+            margin-bottom: 0.75rem;
+            font-family: var(--ff-primary);
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        h4 {
+            font-size: 0.875rem;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--clr-grey-5);
+        }
+
+        @media screen and (min-width: 800px) {
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.75rem;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            body {
+                font-size: 1rem;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4 {
+                line-height: 1;
+            }
+        }
+
+        /*  global classes */
+
+        .btn {
+            text-transform: uppercase;
+            background: transparent;
+            color: var(--clr-black);
+            padding: 0.375rem 0.75rem;
+            letter-spacing: var(--spacing);
+            display: inline-block;
+            transition: var(--transition);
+            font-size: 0.875rem;
+            border: 2px solid var(--clr-black);
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            border-radius: var(--radius);
+        }
+
+        .btn:hover {
+            color: var(--clr-white);
+            background: var(--clr-black);
+        }
+
+        /* section */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-center {
+            width: 90vw;
+            margin: 0 auto;
+            max-width: 1170px;
+        }
+
+        @media screen and (min-width: 992px) {
+            .section-center {
+                width: 95vw;
+            }
+        }
+
+        main {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        /*
+=============== 
+Questions
+===============
+*/
+        .title {
+            /* background-color:blue; */
+            margin-top: 10vh;
+            margin-bottom: 4.5rem;
+            display: grid;
+
+            /* margin-left: 5rem; */
+            /* margin-right: 5rem; */
+            /* padding: 100px; */
+        }
+
+        .title h2 {
+            color: var(--clr-gold);
+            /*font-family: "Great Vibes", cursive;*/
+            text-align: center;
+            /* background-color: red; */
+            padding: 0.5rem;
+        }
+
+
+
+        /* .questions{
+  background: blue;
+} */
+        .section-center {
+            max-width: var(--fixed-width);
+            /* background: yellow; */
+            margin: -3rem auto;
+            padding: 0rem;
+        }
+
+        .question1 {
+            background: var(--clr-white);
+            border-radius: var(--radius);
+            box-shadow: var(--light-shadow);
+            padding: 1.5rem 1.5rem 0 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-title1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: capitalize;
+            padding-bottom: 1rem;
+        }
+
+        .question-title1 p {
+            margin-bottom: 0;
+            letter-spacing: var(--spacing);
+            color: var(--clr-grey-1);
+        }
+
+        .question-btn1 {
+            font-size: 1.5rem;
+            background: transparent;
+            border-color: transparent;
+            cursor: pointer;
+            color: var(--clr-gold);
+            transition: var(--transition);
+        }
+
+        .question-btn1:hover {
+            transform: rotate(90deg);
+        }
+
+        .question-text1 {
+            padding: 1rem 0 1.5rem 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .question-text1 p {
+            margin-bottom: 0;
+        }
+
+        /* hide text */
+        .question-text1 {
+            display: none;
+        }
+
+        .show-text1 .question-text1 {
+            display: block;
+        }
+
+        .minus-icon1 {
+            display: none;
+        }
+
+        .show-text1 .minus-icon1 {
+            display: inline;
+        }
+
+        .show-text1 .plus-icon1 {
+            display: none;
+        }
+
+        .dan-a {
+            color: #e7535a;
+            padding-top: 100px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="questions">
+        <!--title-->
+        <div class="title">
+            <h2> Current Volunteer Vacancies </h2>
+        </div>
+        <!-- questions -->
+        <div class="section-center">
+            <!-- single question -->
+            <article class="question1">
+                <!-- single question -->
+                <div class="question-title1">
+                    <p> Research Assistant Volunteer </p>
+                    <button type="button" class="question-btn1">
+                        <span class="plus-icon1">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon1">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text1">
+                    <p>As a Research Assistant Volunteer, you will be a member of our production team and assist our
+                        Managing Editor. You will have the opportunity to conduct research for a number of different
+                        projects, including: Pain Matters magazine; Pain Press; Airing Pain podcast and research towards
+                        broader organisational goals. By joining us you will join a fast-growing and respected service.
+                    </p>
+                    <b> <a href="https://painconcern.org.uk/wp-content/uploads/2021/12/Researcher-role-for-publications-6.pdf"
+                            class="dan-a"> Full Details </a> </b> -
+                    <a href="https://painconcern.org.uk/wp-content/uploads/2021/12/Volunteer-Application-Form.pdf"
+                        class="dan-a"> <b> Application Form </b></a>
+                    <p><b>Fill in the above forms and send to <a class="dan-a"> hr@painconcern.org.uk </a></b></p>
+
+                </div>
+            </article>
+            <!-- end of single question -->
+            <!-- single question -->
+            <article class="question1">
+                <!-- single question -->
+                <div class="question-title1">
+                    <p> Marketing Manager </p>
+                    <button type="button" class="question-btn1">
+                        <span class="plus-icon1">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon1">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text1">
+                    <p> Are you seeking employment in Marketing and need practical experience?
+                        Do you have experience in this field and would like to put it to good use whilst supporting a
+                        worthwhile cause? If so, we would love to hear from you. We are looking for an individual who
+                        can help us implement and deliver our Marketing strategy. </p>
+                    <b><a href="https://painconcern.org.uk/wp-content/uploads/2021/11/Marketing-Manager-role.pdf"
+                            class="dan-a">Full Details</a></b> -
+
+                    <a href="https://painconcern.org.uk/wp-content/uploads/2021/12/Volunteer-Application-Form.pdf"
+                        class="dan-a"> <b> Application Form </b></a>
+                    <p><b>Fill in the above forms and send to hr@painconcern.org.uk</b></p>
+                </div>
+            </article>
+            <!-- end of single question -->
+            <!-- single question -->
+            <article class="question1">
+                <!-- question title -->
+                <div class="question-title1">
+                    <p> Website Volunteer </p>
+                    <button type="button" class="question-btn1">
+                        <span class="plus-icon1">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon1">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text1">
+                    <p> Are you looking to build your skills in web development?
+                        This voluntary role provides an opportunity to gain and develop skills whilst doing something
+                        worthwhile. </p>
+                    <b><a href="https://painconcern.org.uk/wp-content/uploads/2021/11/Website-Volunteer-RD-Nov-21.pdf"
+                            class="dan-a"> Full Details</a> </b> -
+                    <a href="https://painconcern.org.uk/wp-content/uploads/2021/12/Volunteer-Application-Form.pdf"
+                        class="dan-a"> <b>Application Form </b></a>
+                    <p><b>Fill in the above forms and send to hr@painconcern.org.uk</b></p>
+                </div>
+            </article>
+            <!-- end of single question -->
+        </div>
+    </section>
+    <!-- javascript -->
+</body>
+
+<script>
+    const questions1 = document.querySelectorAll('.question1');
+
+    questions1.forEach(function (question1) {
+        const btn1 = question1.querySelector(".question-btn1");
+        btn1.addEventListener('click', function () {
+            questions1.forEach(function (item) {
+                if (item != question1) {
+                    item.classList.remove("show-text1");
+                }
+            });
+            question1.classList.toggle("show-text1");
+        });
+    });
+</script>
+
+</html>
+<!-- /wp:html -->

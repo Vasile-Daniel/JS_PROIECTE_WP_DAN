@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style_cadrane.css"> -->
+    <style>
+        :root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: #49a6e9;
+  /* --clr-primary-5: rgb(73, 166, 233); */
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+*, ::after, ::before {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Miriad-Pro-Regular;
+}
+
+.menu{
+    padding: 5rem 0;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 2rem;
+    /* font-size: 2.5rem; */
+}
+
+.underline{
+    width:5rem; 
+    height: 0.25rem;
+    background-color: #e7535a;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-center{
+    /* background-color: aqua; */
+    /* background-color: #f5f0ed; */
+    width: 90vw; 
+    margin: 0rem auto;
+    max-width: 1170px;
+    display: grid;
+    gap: 2rem 2rem; 
+    justify-content: center;
+
+}
+
+.menu-item{
+    background-color: #f5f0ed;
+    /* background-color: red; */
+    display: grid; 
+    gap: 1rem 2rem;
+    min-height: 15rem;
+    max-width: 40rem; 
+    box-shadow: var(--dark-shadow);
+    padding: 1rem; 
+}
+.item3{
+    margin-top: 0.5rem; 
+    padding-top: 0.5rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-top: 0.2rem double #e7535a;
+}
+
+
+.photo {
+    object-fit: cover;
+    height: 200px;
+    border: 0.25rem solid #e7535a; 
+    box-shadow: var(--dark-shadow);
+}
+
+.item-info {
+    /* background-color: bisque; */
+    background-color: #f5f0ed;
+}
+
+.item-info h4 {
+    margin-bottom: 0.05rem;
+    border-bottom: 0.25rem double #e7535a;
+    padding: 0.5rem;
+}
+
+.item-text{
+    margin-bottom: 0; 
+    padding-top: 1rem;
+    padding: 0.5rem;
+}
+
+@media screen and (min-width: 768px){
+
+
+    .title{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+    .menu-item{
+        /* background-color: red; */
+        grid-template-columns: 225px 1fr;
+        gap: 0 1.25rem; 
+        max-width: 40rem;
+    }
+    .photo{
+        height: 175px; 
+    }
+}
+
+@media screen and (min-width: 1200px){
+        .underline{
+    width:25vw; 
+    height: 0.3rem;
+    background-color: #e7535a;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+    .section-center{
+        width: 95vw;
+        grid-template-columns: 1fr 1fr;
+    }
+    .photo{
+        height: 150px; 
+    }
+}
+    </style>
+</head>
+<body>
+    <section class = "menu">
+        <div class = "title"> 
+            <h2> Board of Trustees </h2>
+            <div class = "underline"></div>
+        </div>
+        <div class = "section-center">
+            <article class = "menu-item">
+                <img src="Martin_Dunbar.jpeg" class = "photo" alt="">
+                <div class = "item-info">
+                    <h4> ${item.title} </h4>
+                    <p class = "item-text"> BSc (Hons), PhD, D.Clin.Psychol. </p>
+                    <p class = "item-text"> <b>Trustee since </b> 23 August 2018 </p>
+                    <p class = "item-text"> <b> Role </b> Chair </p>
+                </div>
+            </article>    
+
+        </div>
+    </section>
+    <!-- <script src =  "app_trustees.js"></script> -->
+</body>
+    <script>
+        const menu = [
+    {
+        id: 1,
+        title: "Dr Martin Dunbar",
+        img: "./Martin_Dunbar.jpeg",
+        edu: "BSc (Hons), PhD, D.Clin.Psychol.", 
+        date: "23 August 2018", 
+        role: "Chair", 
+        desc: "Martin is a clinical psychologist by training and for over twenty years worked in Glasgow's NHS pain service, latterly as the clinical lead for the Glasgow pain management programme (GPMP). The GPMP provided people who live with pain the skills to better self-manage their difficulties and this is something that Martin is very passionate about. At the heart of self-management is an improved understanding of chronic pain and all the various options for help, and the work of Pain Concern is a massive help in improving this. ", 
+    }, 
+        {
+        id: 2,
+        title: "John Finch",
+        img: "./John_Finch.jpeg",
+        edu: "BVM&S MSc DLAS FRCPath MRCVS", 
+        date: "23 August 2018", 
+        role: "Hon. Treasurer",
+        desc: "Born August 1954, John was a Veterinary Surgeon who has worked in general practice, tropical disease investigation (in Yemen), toxicological pathology (supporting drug safety evaluation) and laboratory animal welfare. John is currently a member of the management team at the Edinburgh site of Charles River Laboratories, where they help clients develop new medicines and agricultural products. John chairs the committee running Haddington Concert Society a concert promoting society running professional classical music concerts in Haddington, East Lothian.", 
+    }, 
+        {
+        id: 3,
+        title: "Dr. Sue Peacock",
+        img: "./SuePeacock.jpeg",
+         edu: "BSc (Hons) Physio, PG Cert Pain, Dip Ortho Med, Dip Mgmt, MCSP, Council Member of British Pain Society", 
+        date: "23 August 2018", 
+        role: "Trustee",
+        desc: "Born June 1971. Sue Peacock is a Consultant Health Psychologist, registered with HCPC. She has over twenty years experience of working with people with chronic/persistent pain. Sue set up the psychological side of the Pain Clinic at Milton Keynes University Hospital and a support group which thrives 15 years later. For the past 3 years, Sue has worked in independent practice. She has published her research around pain and has written three books for people with chronic/persistent pain. Sue is a member of many professional bodies including The British Pain Society, in the past she has been secretary for the Pain Management Programme Special Interest Group and is currently secretary for the Primary and Community Care Special Interest Group.", 
+    }, 
+        {
+        id: 4,
+        title: "Michael Serpell",
+        img: "./Michael_Serpell.png",
+         edu: "", 
+        date: "7 November 2019", 
+        role: "",
+        desc: "Born December 1959. Mick Serpell is a Consultant in Anaesthesia & Pain Medicine for Greater Glasgow & Clyde NHS, and Senior Lecturer at Glasgow University. He is Series Editor for Anaesthesia & Intensive Care Medicine, is Associate Editor for Pain Management, sits on the Advisory Board for European Journal of Pain, and reviews articles for several other pain related Journals. He is examiner for the FFPMRCA for the Royal College of Anaesthetists. He has received honoraria from Astellas, Grünenthal, NAPP and Pfizer for speaking at meetings. His institution has received research support in the past 5 years from numerous commercial sponsored studies.", 
+    }, 
+
+
+        {
+        id: 5,
+        title: "Robin Aitchison",
+        img: "./logo.png",
+         edu: "", 
+        date: "12 April 2019", 
+        role: "Trustee",
+        desc: "Born in June 1957. Works as a Tax Partner for Ernst and Young", 
+    }, 
+        {
+        id: 6,
+        title: "Cathy Price",
+        img: "./Cathy-Price.jpg",
+         edu: "MB BCH, DCH, FRCA, FFPMRCA", 
+        date: "01 July 2021", 
+        role: "",
+        desc: "Cathy is a consultant in Pain Medicine in Southampton and has worked there since 1999. She provides medical services for people with long term pain. To do this she works in a multidisciplinary pain clinic, provides theatre lists for nerve blocks and also covers inpatient wards. Cathy is also a Clinical Director for Solent NHS Trust for a variety of differing services including general practice and musculoskeletal services. She undertakes research into several aspects of pain management, including the effectiveness of nerve blocks, employment issues and pain and developing pain registries. Cathy also leads a National Pain Audit for four years and won a Medical Futures award for Innovation in 2005 and was made an Honorary Member of the British Pain Society in 2014.", 
+    }, 
+        {
+        id: 7,
+        title: "Iain Weir",
+        img: "./ian-weir.png",
+         edu: "", 
+        date: "7 November 2019", 
+        role: "Trustee",
+        desc: "Iain has had a very varied career from working in the events industry as a technical production manager. Sadly, his health deteriorated and he found himself over-qualified for the part-time work that he was able to do so he turned to volunteering. Iain has volunteered with a wide variety of organisations over the years but most enjoyable was his time with Citizens Advice Scotland, Pain Concern and his local Chronic Pain Services department. Iain has turned his life’s challenges into positives to help benefit others. His main skills are in the management of personnel, planning, procedures and IT.", 
+    }, 
+        {
+        id: 8,
+        title: "Richard Pell",
+        img: "./RichardPell1.jpg",
+         edu: "BSc(Hons) PGCert. MCSP", 
+        date: "7 November 2019", 
+        role: "Trustee",
+        desc: "Richard is a physiotherapist by professional background and worked in community musculoskeletal (MSK), occupational health and pain management services for 10 years. He is now Head of NHS Service Development for Connect Health, the largest independent provider of community MSK, pain management and rheumatology services to the NHS in England. In addition Richard is Campaign Director for Flippin’ PainTM (www.flippinpain.co.uk), a public health campaign focused on engaging, educating and empowering communities towards a contemporary understanding of pain science and management.", 
+    }, 
+
+]
+
+const sectionCenter = document.querySelector(".section-center");
+
+window.addEventListener("DOMContentLoaded", function(){
+    let displayMenu = menu.map(function (item) {
+        console.log(item); 
+        return `<article class = "menu-item">
+                <img src=${item.img} class = "photo" alt="">
+                <div class = "item-info">
+                    <h4> ${item.title} </h4>
+                    <p class = "item-text"> ${item.edu} </p>
+                    <p class = "item-text"> <b>Trustee since </b> ${item.date} </p>
+                    <p class = "item-text"> <b> Role </b> ${item.role} </p>
+                </div>
+                <div class = "item3"> <b> Biography: </b>${item.desc}</div>
+            </article>    
+        `;
+    });
+    displayMenu = displayMenu.join("");
+    sectionCenter.innerHTML = displayMenu; 
+})
+
+    </script>
+</html>

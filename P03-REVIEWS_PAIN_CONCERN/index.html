@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Testimonials </title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <!-- styles -->
+    <style>
+      /*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  /* --clr-primary-5: hsl(205, 78%, 60%); */
+  --clr-primary-5: #E7535A;
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/*
+=============== 
+Reviews
+===============
+*/
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.underline {
+  height: 0.25rem;
+  width: 5rem;
+  background: var(--clr-primary-5);
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-testimonials {
+  width: 80vw;
+  max-width: var(--fixed-width);
+}
+.review {
+  background: var(--clr-white);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+.review:hover {
+  box-shadow: var(--dark-shadow);
+}
+.img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+#person-img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+.img-container::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f10e";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+}
+.img-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--clr-primary-5);
+  position: absolute;
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+}
+#author {
+  margin-bottom: 0.25rem;
+}
+#job {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: var(--clr-primary-5);
+  font-size: 0.85rem;
+}
+#info {
+  margin-bottom: 0.75rem;
+}
+.prev-btn,
+.next-btn {
+  /* color: var(--clr-primary-7); */
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  color:  #F5F0ED;
+}
+.random-btn2 {
+  margin-top: 0.5rem;
+  background: var(--clr-gray-10);
+  color: var(--clr-primary-5);
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  border-color: var(--clr-primary-5);
+  cursor: pointer;
+}
+.random-btn2:hover {
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+}
+
+.cutie-fixa {
+  /* background-color: red;  */
+  min-width: 100px; 
+  min-height: 145px;
+}
+
+/* star  */
+.star-imags {
+  background: var(--clr-white);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+.star-imags:hover {
+  box-shadow: var(--dark-shadow);
+}
+.img-container1 {
+  position: relative;
+  width: 550px;
+  height: 350px;
+  border-radius: 5%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  border: solid #E7535A;
+}
+#person-img1 {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+  position: relative;
+}
+
+.button-container1{
+  background: #e7535a;
+}
+
+@media screen and (min-width: 360px) {
+    .img-container1 {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 5%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    border: solid #E7535A;
+  }
+
+
+  .cutie-fixa {
+    /* background-color: red;  */
+    min-width: 100px; 
+    min-height: 250px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+    .img-container1 {
+    position: relative;
+    width: 170px;
+    height: 250px;
+    border-radius: 5%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    border: solid #E7535A;
+  }
+  .cutie-fixa {
+    /* background-color: red;  */
+    min-width: 100px; 
+    min-height: 250px;
+  }
+}
+
+
+@media screen and (min-width: 450px) {
+    .img-container1 {
+    position: relative;
+    width: 330px;
+    height: 250px;
+    border-radius: 5%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    border: solid #E7535A;
+  }
+
+
+  .cutie-fixa {
+    /* background-color: red;  */
+    min-width: 100px; 
+    min-height: 250px;
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+    .img-container1 {
+    position: relative;
+    width: 550px;
+    height: 350px;
+    border-radius: 5%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    border: solid #E7535A;
+  }
+}
+      </style>
+  </head>
+  <body>
+    <main>
+      <section class="container-testimonials">
+        <!-- title -->
+        <div class="title">
+          <h2> Testimonials </h2>
+          <div class="underline"></div>
+        </div>
+        <!-- review -->
+        <article class="review">
+          <div class="img-container">
+            <img src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg" id="person-img" alt="" />
+          </div>
+          <h4 id="author"> Georgia Gaffney </h4>
+          <p id="job"> Editorial Volunteer </p>
+          <div class = "cutie-fixa">
+              <p id="info">
+            "Developing my editorial skills and participating in an organisation that supports people\'s wellbeing were my main
+            motivations for volunteering at Pain Concern, but I have felt many other benefits. I only started volunteering for Pain Concern this March, but I\'ve already been made to feel part of the team by everyone here. A major strength of Pain Concern is that we stay connected via Teams and email, and so there is always a feeling of working towards common goals. Whenever I am doing a task, I get informative guidance and feedback, which helps me improve my skills."</p>
+          </div> 
+          <!-- prev next buttons-->
+          <div class="button-container">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <!-- random button -->
+          <button class="random-btn2">surprise me</button>
+        </article>
+        <br>
+        <!-- star images -->
+        <article class="star-imags">
+          <div class="img-container1">
+            <img src="pictures/stea1roz.jpg" id="person-img1" alt="" />
+          </div>
+          <!-- prev next buttons-->
+          <div class="button-container1">
+            <button class="prev-btn1">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn1">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+      <!-- javascript -->
+      <script>
+        // local reviews data
+        const reviews = [
+
+        
+          {
+            id: 1,
+            name: "Georgia ",
+            job: "Editorial Volunteer",
+            img:
+              "https://painconcern.org.uk/wp-content/uploads/2021/12/Georgia_Gaffney.jpg",
+            text:
+              "Developing my editorial skills and participating in an organisation that supports people’s wellbeing were my main motivations for volunteering at Pain Concern, but I have felt many other benefits. I only started volunteering for Pain Concern this March, but I’ve already been made to feel part of the team by everyone here. A major strength of Pain Concern is that we stay connected via Teams and email, and so there is always a feeling of working towards common goals. Whenever I am doing a task, I get informative guidance and feedback, which helps me improve my skills.",
+          },
+          {
+            id: 2,
+            name: "Katie ",
+            job: "Listener & Readers Panel Volunteer",
+            img:
+              "https://painconcern.org.uk/wp-content/uploads/2021/12/Katie_Brumpton.jpg",
+            text:
+              "",
+          },
+          {
+            id: 3,
+            name: "Bassel",
+            job: "Social Media Volunteer",
+            img:
+              "https://painconcern.org.uk/wp-content/uploads/2021/12/Bassel_Awwad.jpg",
+            text:
+              "",
+          },
+          {
+            id: 4,
+            name: "Vicki",
+            job: "Listener & Readers Panel volunteer ",
+            img:
+              "https://painconcern.org.uk/wp-content/uploads/2021/12/Vicki_Cooper.jpg",
+            text:
+              "I love being a Listener and Reader panel volunteer for Pain Concern. As well as helping others, reviewing their podcasts and literature means I often come across ideas I can try for my own pain management.",
+          },
+          {
+            id: 5,
+            name: "Isabelle",
+            job: "Online community volunteer ",
+            img:
+              "https://painconcern.org.uk/wp-content/uploads/2021/12/roz1-scaled.jpg",
+            text:
+              "I volunteer because I am looking to build a career in psychology, and Pain Concern offer a lot of support and training for their volunteers. They also have a lot of resources and provide great help for people living with chronic pain, and I enjoy being able to help others.",
+          },
+          {
+            id: 6,
+            name: "Sara",
+            job: "HR volunteer ",
+            img:
+              "https://painconcern.org.uk/wp-content/uploads/2021/12/roz1-scaled.jpg",
+            text:
+              "Volunteering for Pain Concern is very rewarding as it gives me a unique experience in my field of studies and makes me proud to be part of an organisation that makes a real impact on people's lives.",
+          },
+          {
+            id: 7,
+            name: "Glen",
+            job: "Helpline & Online community volunteer ",
+            img:
+              "https://painconcern.org.uk/wp-content/uploads/2021/12/roz1-scaled.jpg",
+            text:
+              "I volunteer because it gives me a sense of purpose and allows me to help other people in chronic pain.",
+          },
+        ];
+
+        // const star_images = [
+        //     { id: 1, img: "pictures/stea1rozX.jpg", },
+        //     { id: 2, img: "pictures/stea2rozX.jpg", },
+        //     { id: 3, img: "pictures/stea3roz.jpg", },
+        //   ];
+
+        // select items
+        const img = document.getElementById("person-img");
+        const author = document.getElementById("author");
+        const job = document.getElementById("job");
+        const info = document.getElementById("info");
+
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        const randomBtn = document.querySelector(".random-btn2");
+
+        // set starting item
+        let currentItem = 0;
+
+        // load initial item
+        window.addEventListener("DOMContentLoaded", function () {
+          const item = reviews[currentItem];
+          img.src = item.img;
+          author.textContent = item.name;
+          job.textContent = item.job;
+          info.textContent = item.text;
+        });
+
+        // show person based on item
+        function showPerson(person) {
+          const item = reviews[person];
+          img.src = item.img;
+          author.textContent = item.name;
+          job.textContent = item.job;
+          info.textContent = item.text;
+        }
+        // show next person
+        nextBtn.addEventListener("click", function () {
+          currentItem++;
+          if (currentItem > reviews.length - 1) {
+            currentItem = 0;
+          }
+          showPerson(currentItem);
+        });
+        // show prev person
+        prevBtn.addEventListener("click", function () {
+          currentItem--;
+          if (currentItem < 0) {
+            currentItem = reviews.length - 1;
+          }
+          showPerson(currentItem);
+        });
+        // show random person
+        randomBtn.addEventListener("click", function () {
+          console.log("hello");
+
+          currentItem = Math.floor(Math.random() * reviews.length);
+          showPerson(currentItem);
+        });
+
+        /////////////////////////
+
+          const star_images = [
+            { id: 1, img: "https://painconcern.org.uk/wp-content/uploads/2022/01/stea1rozX.jpg", },
+            { id: 2, img: "https://painconcern.org.uk/wp-content/uploads/2022/01/stea2rozX.jpg", },
+            { id: 3, img: "https://painconcern.org.uk/wp-content/uploads/2022/01/stea3roz.jpg", },
+          ];
+          // select items
+          const prevBtn1 = document.querySelector(".prev-btn1");
+          const nextBtn1 = document.querySelector(".next-btn1");
+          const imgStar = document.getElementById("person-img1");
+          // set starting item
+          let currentItem1 = 0;
+
+          // load initial item
+          window.addEventListener("DOMContentLoaded", function () {
+            const item1 = star_images[currentItem1];
+            imgStar.src = item1.img;
+          });
+
+          // show person based on item
+          function showPerson1(person1) {
+            const item1 = star_images[person1];
+            imgStar.src = item1.img;
+          }
+          // show next person
+          nextBtn1.addEventListener("click", function () {
+            currentItem1++;
+            if (currentItem1 > star_images.length - 1) {
+              currentItem1 = 0;
+            }
+            showPerson1(currentItem1);
+          });
+          // show prev person
+          prevBtn1.addEventListener("click", function () {
+            currentItem1--;
+            if (currentItem1 < 0) {
+              currentItem1 = star_images.length - 1;
+            }
+            showPerson1(currentItem1);
+          });
+      </script>
+</html>

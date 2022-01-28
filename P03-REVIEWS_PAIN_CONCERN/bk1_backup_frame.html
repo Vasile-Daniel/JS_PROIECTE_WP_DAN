@@ -1,0 +1,229 @@
+<head>
+    <style>
+        /*
+=============== 
+Fonts
+===============
+*/
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+        /*
+=============== 
+Variables
+===============
+*/
+
+        :root {
+            /* primary/main color */
+            --clr-primary-5: #e7535a;
+            --clr-white: #fff;
+            /*--clr-red-dark: hsl(360, 67%, 44%);*/
+            /*--clr-red-light: hsl(360, 71%, 66%);*/
+            /*--clr-green-dark: hsl(125, 67%, 44%);*/
+            /*--clr-green-light: hsl(125, 71%, 66%);*/
+            --clr-gold: #e7535a;
+            --clr-black: #222;
+            /*--ff-primary: "Roboto", sans-serif;*/
+            /*--ff-secondary: "Open Sans", sans-serif;*/
+            --transition: all 0.3s linear;
+            --spacing: 0.25rem;
+            --radius: 0.5rem;
+            --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            --max-width: 1170px;
+            --fixed-width: 620px;
+            --width-back: 220px;
+        }
+
+        /*
+=============== 
+Global Styles
+===============
+*/
+
+        *,
+        ::after,
+        ::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--ff-secondary);
+            /*background: var(--clr-grey-10);*/
+            color: var(--clr-grey-1);
+            /*line-height: 1.5;*/
+            /*font-size: 0.875rem;*/
+        }
+
+        /*ul {list-style-type: none;}*/
+        /*a {text-decoration: none;}*/
+
+        /*h1,h2,h3,h4 {*/
+        /*  letter-spacing: var(--spacing);*/
+        /*  text-transform: capitalize;*/
+        /*  line-height: 1.25;*/
+        /*  margin-bottom: 0.75rem;*/
+        /*  font-family: var(--ff-primary);*/
+        /*}*/
+        /*h1 {font-size: 3rem;}*/
+        /*h2 {font-size: 2rem;}*/
+        /*h3 {font-size: 1.25rem;}*/
+        /*h4 {font-size: 0.875rem;}*/
+        /*p {*/
+        /*  margin-bottom: 1.25rem;*/
+        /*  color: var(--clr-grey-5);*/
+        /*}*/
+        @media screen and (min-width: 800px) {
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.75rem;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            body {
+                font-size: 1rem;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4 {
+                line-height: 1;
+            }
+        }
+
+        /*  global classes */
+        /* section */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-center1x {
+            width: 90vw;
+            margin: 5vw auto;
+            max-width: 1170px;
+        }
+
+        @media screen and (min-width: 992px) {
+            .section-center {
+                width: 95vw;
+            }
+        }
+
+        /*main {*/
+        /*  min-height: 100vh;*/
+        /*  display: grid;*/
+        /*  place-items: center;*/
+        /*}*/
+        /*
+=============== 
+Questions
+===============
+*/
+
+        .imagine1x {
+            background: var(--clr-gold);
+            /* background-image: url(./hlp-member-rgb_SML-300x195.jpg);  */
+            background-image: url(https://painconcern.org.uk/wp-content/uploads/2021/12/mica-hlp-member-rgb_SML-300x195-1-e1639061512698.jpg);
+            background-size: var(--width-back);
+            background-repeat: no-repeat;
+            /* border: solid var(--clr-gold); */
+            border-radius: 8%;
+            height: 142px;
+            width: var(--width-back);
+            padding: 1rem;
+            display: block;
+            position: relative;
+            margin-top: -4.0rem;
+            margin-left: 0rem;
+            margin-right: auto;
+            margin-bottom: -4rem;
+            box-shadow: var(--dark-shadow);
+        }
+
+        .question1x {
+            background: var(--clr-white);
+            border-radius: var(--radius);
+            box-shadow: var(--light-shadow);
+            padding: 1.5rem 1.5rem 0 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-center1x {
+            /* background: black;  */
+            max-width: var(--fixed-width);
+            padding: 0rem;
+        }
+
+
+        .question-text1x {
+            padding: 1rem 0 1.5rem 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .question-text1x p {
+            margin-bottom: 0;
+        }
+
+        .title1x {
+            margin-top: 10vh;
+            margin-bottom: 4.5rem;
+            display: grid;
+        }
+
+        .italic1 {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="questions1x">
+        <!-- questions -->
+        <div class="section-center1x">
+            <article class="question1x">
+                <!-- single question -->
+                <div class="question-title1x">
+
+                    <p> Welcome to our volunteering page. </p>
+
+                    <p> Please take a look at our current vacancies and our FAQ's are below for more information on
+                        volunteering. </p>
+
+                    <p> We truly value the support from every one of our volunteers and we welcome volunteers from
+                        diverse backgrounds and with a wide range of skills and experiences. </p>
+
+                    <p> Volunteering gives you the opportunity to meet new people, build on your employability skills
+                        and the satisfaction of giving a valuable service to the community. </p>
+
+                    <p> Thank you for stopping by. </p>
+                </div>
+
+                <div class="question-text1x">
+                    <div class="title1x">
+                        <a href="https://www.helplines.org">
+                            <div class="imagine1x"></div>
+                        </a>
+                    </div>
+                    <p class="italic1"> Pain Concern is a member of Helplines Partnership — this means we have met the
+                        relevant criteria
+                        to become part of the membership</p>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+
+</html>

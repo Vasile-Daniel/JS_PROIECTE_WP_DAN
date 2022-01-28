@@ -1,0 +1,491 @@
+<!-- wp:html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q & A</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- extra fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet" />
+    <!-- styles -->
+    <style>
+        /*
+=============== 
+Fonts
+===============
+*/
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+        /*
+=============== 
+Variables
+===============
+*/
+
+        :root {
+            /* dark shades of primary color*/
+            --clr-primary-1: hsl(205, 86%, 17%);
+            --clr-primary-2: hsl(205, 77%, 27%);
+            --clr-primary-3: hsl(205, 72%, 37%);
+            --clr-primary-4: hsl(205, 63%, 48%);
+            /* primary/main color */
+            --clr-primary-5: #49a6e9;
+            /* lighter shades of primary color */
+            --clr-primary-6: hsl(205, 89%, 70%);
+            --clr-primary-7: hsl(205, 90%, 76%);
+            --clr-primary-8: hsl(205, 86%, 81%);
+            --clr-primary-9: hsl(205, 90%, 88%);
+            --clr-primary-10: hsl(205, 100%, 96%);
+            /* darkest grey - used for headings */
+            --clr-grey-1: hsl(209, 61%, 16%);
+            --clr-grey-2: hsl(211, 39%, 23%);
+            --clr-grey-3: hsl(209, 34%, 30%);
+            --clr-grey-4: hsl(209, 28%, 39%);
+            /* grey used for paragraphs */
+            --clr-grey-5: hsl(210, 22%, 49%);
+            --clr-grey-6: hsl(209, 23%, 60%);
+            --clr-grey-7: hsl(211, 27%, 70%);
+            --clr-grey-8: hsl(210, 31%, 80%);
+            --clr-grey-9: hsl(212, 33%, 89%);
+            --clr-grey-10: hsl(210, 36%, 96%);
+            --clr-white: #fff;
+            --clr-red-dark: hsl(360, 67%, 44%);
+            --clr-red-light: hsl(360, 71%, 66%);
+            --clr-green-dark: hsl(125, 67%, 44%);
+            --clr-green-light: hsl(125, 71%, 66%);
+            --clr-gold: #E7535A;
+            --clr-black: #222;
+            --ff-primary: "Roboto", sans-serif;
+            --ff-secondary: "Georgia", sans-serif;
+            --transition: all 0.3s linear;
+            --spacing: 0.25rem;
+            --radius: 0.5rem;
+            --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            --max-width: 1170px;
+            --fixed-width: 620px;
+            --width-back: 220px;
+        }
+
+        /*
+=============== 
+Global Styles
+===============
+*/
+
+        *,
+        ::after,
+        ::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            letter-spacing: var(--spacing);
+            text-transform: capitalize;
+            line-height: 1.25;
+            margin-bottom: 0.75rem;
+            font-family: var(--ff-primary);
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        h4 {
+            font-size: 0.875rem;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--clr-grey-5);
+        }
+
+        @media screen and (min-width: 800px) {
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.75rem;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            body {
+                font-size: 1rem;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4 {
+                line-height: 1;
+            }
+        }
+
+        /*  global classes */
+
+        .btn {
+            text-transform: uppercase;
+            background: transparent;
+            color: var(--clr-black);
+            padding: 0.375rem 0.75rem;
+            letter-spacing: var(--spacing);
+            display: inline-block;
+            transition: var(--transition);
+            font-size: 0.875rem;
+            border: 2px solid var(--clr-black);
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            border-radius: var(--radius);
+        }
+
+        .btn:hover {
+            color: var(--clr-white);
+            background: var(--clr-black);
+        }
+
+        /* section */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-center {
+            width: 90vw;
+            margin: 0 auto;
+            max-width: 1170px;
+        }
+
+        @media screen and (min-width: 992px) {
+            .section-center {
+                width: 95vw;
+            }
+        }
+
+        main {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        /*
+=============== 
+Questions
+===============
+*/
+        .title {
+            /* background-color:blue; */
+            margin-top: 10vh;
+            margin-bottom: 4.5rem;
+            display: grid;
+
+            /* margin-left: 5rem; */
+            /* margin-right: 5rem; */
+            /* padding: 100px; */
+        }
+
+        .title h2 {
+            color: var(--clr-gold);
+            text-align: center;
+            /* background-color: red; */
+            padding: 0.5rem;
+        }
+
+
+
+        /* .questions{
+  background: blue;
+} */
+        .section-center {
+            max-width: var(--fixed-width);
+            /* background: yellow; */
+            margin: -3rem auto;
+            padding: 0rem;
+        }
+
+        .question {
+            background: var(--clr-white);
+            border-radius: var(--radius);
+            box-shadow: var(--light-shadow);
+            padding: 1.5rem 1.5rem 0 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: capitalize;
+            padding-bottom: 1rem;
+        }
+
+        .question-title p {
+            margin-bottom: 0;
+            letter-spacing: var(--spacing);
+            color: var(--clr-grey-1);
+        }
+
+        .question-btn {
+            font-size: 1.5rem;
+            background: transparent;
+            border-color: transparent;
+            cursor: pointer;
+            color: var(--clr-gold);
+            transition: var(--transition);
+        }
+
+        .question-btn:hover {
+            transform: rotate(90deg);
+        }
+
+        .question-text {
+            padding: 1rem 0 1.5rem 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .question-text p {
+            margin-bottom: 0;
+        }
+
+        /* hide text */
+        .question-text {
+            display: none;
+        }
+
+        .show-text .question-text {
+            display: block;
+        }
+
+        .minus-icon {
+            display: none;
+        }
+
+        .show-text .minus-icon {
+            display: inline;
+        }
+
+        .show-text .plus-icon {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="questions">
+        <!--title-->
+        <div class="title">
+            <h2> Frequently Asked Questions </h2>
+        </div>
+        <!-- questions -->
+        <div class="section-center">
+            <!-- single question -->
+            <article class="question">
+                <!-- single question -->
+                <div class="question-title">
+                    <p>What can I gain from volunteering? </p>
+                    <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p>You can gain experience to help build your career and confidence as it can help you build a real
+                        sense of achievement. </p>
+                    <p>The opportunity to develop skills. Through volunteering you can challenge yourself to try
+                        something different, achieve
+                        personal goals, practise using your skills and discover hidden talents. </p>
+                    <p>Meet new people. </p>
+                    <p>Satisfaction of giving a valuable service to the community. </p>
+                </div>
+            </article>
+            <!-- end of single question -->
+            <!-- single question -->
+            <article class="question">
+                <!-- single question -->
+                <div class="question-title">
+                    <p>Do I need to have previous experience of the role?</p>
+                    <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p> Depending on the selection process we will be looking at different kinds of backgrounds and/or
+                        studies. However, we always provide induction and training and will have a team/team-leader
+                        supporting you during your volunteering journey. </p>
+                </div>
+            </article>
+            <!-- end of single question -->
+            <!-- single question -->
+            <article class="question">
+                <!-- question title -->
+                <div class="question-title">
+                    <p> How do I apply? </p>
+                    <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p>There are lots of ways you can volunteer for Pain Concern. We have a range of roles which we
+                        would appreciate your
+                        support with. It all depends on what skills you have and how much time you’ve got to give. </p>
+
+                    <p> For current vacancies please see section above, for more information please email
+                        <span>hr@painconcern.org.uk. </span></p>
+
+                    <p>All volunteer roles at Pain Concern are subject to our Volunteering Agreement. </p>
+                </div>
+            </article>
+            <!-- end of single question -->
+            <!-- single question -->
+            <article class="question">
+                <!-- question title -->
+                <div class="question-title">
+                    <p> Can I volunteer if I have used Pain Concern services before? </p>
+                    <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p>You can volunteer if you have used our services before. At Pain Concern we value if you have
+                        experienced chronic pain yourself or through someone you care about. We think it can give you
+                        some insight although it is not a requirement. </p>
+                </div>
+            </article>
+            <!-- end of single question -->
+            <!-- single question -->
+            <article class="question">
+                <!-- question title -->
+                <div class="question-title">
+                    <p>Can I volunteer from home? </p>
+                    <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p> We encourage flexibility and all our roles can be carried out from home. Many of our roles you
+                        can volunteer at a time that works best for you. </p>
+                </div>
+            </article>
+            <!-- end of single question -->
+            <!-- single question -->
+            <article class="question">
+                <!-- question title -->
+                <div class="question-title">
+                    <p>Can I claim expenses? </p>
+                    <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p> Yes, you will be reimbursed for reasonable expenses such as travel. More details on this, once
+                        you start volunteering. </p>
+                </div>
+            </article>
+            <!-- end of single question -->
+            <!-- single question -->
+            <article class="question">
+                <!-- question title -->
+                <div class="question-title">
+                    <p>Can I volunteer with Pain Concern if I have a criminal record? </p>
+                    <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p> We actively promote equality of opportunity for all and welcome applications from a wide range
+                        of applicants. Pain Concern is committed to safeguarding those that use our services, which
+                        includes references checks. However, for volunteers in the Helpline it is regulated work so we
+                        require a successful PVG check. </p>
+                </div>
+            </article>
+            <!-- end of single question -->
+        </div>
+    </section>
+    <!-- javascript -->
+
+</body>
+
+<script>
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach(function (question) {
+        const btn = question.querySelector(".question-btn");
+        btn.addEventListener('click', function () {
+            questions.forEach(function (item) {
+                if (item != question) {
+                    item.classList.remove("show-text");
+                }
+            });
+            question.classList.toggle("show-text");
+        });
+    });
+</script>
+
+</html>
+<!-- /wp:html -->

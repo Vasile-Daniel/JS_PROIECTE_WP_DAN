@@ -1,0 +1,24 @@
+01. Color Flipper - done 
+02. Counter - done 
+03. Reviews Pain Concern- done 
+04. Navbar Edinburgh - done 
+05. Sidebare Bucharest - done 
+06. Romanian Modal - done  
+07. Questions Pain Concern - done 
+08. Romanian Menu  - done 
+09. Video 
+10. Scroll 
+11. Tabs 
+12. Countdown 
+13. Lorem Ipsum
+14. Grocery 
+15. Slider 
+-------------------------------
+IN01 - CLOCK V1 
+IN02 - CALCULATOR - done 
+IN03 - PAIN CONCERN BOARD TRUSTEE - done 
+IN04 - COUNTER v2 - done 
+IN05 - BLCKJACKGAME  - done 
+IN10 - CLOCK V2 
+IN11 - TIC TAC TOE 
+
